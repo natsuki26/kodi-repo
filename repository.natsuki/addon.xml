@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.natsuki" name="natsuki Add-ons (dev)" version="0.1" provider-name="natsuki">
+	<extension point="xbmc.addon.repository" name="natsuki">
+		<info>https://raw.githubusercontent.com/natsuki26/kodi-repo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/natsuki26/kodi-repo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/natsuki26/kodi-repo/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">natsuki dev repository</summary>
+		<description lang="en">Repository for kodi addons provided by natsuki</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
