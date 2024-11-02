@@ -1,148 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <variable name="Image_Background_Cheater_C301">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$VAR[Image_SimpleBackground]</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Art(fanart))">$INFO[Container(301).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Art(tvshow.fanart))">$INFO[Container(301).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Art(artist.fanart))">$INFO[Container(301).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-        <value condition="True">$VAR[Image_SimpleBackground]</value>
-    </variable>
-    <variable name="Image_Background_Cheater_C503">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$VAR[Image_SimpleBackground]</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(fanart))">$INFO[Container(503).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(tvshow.fanart))">$INFO[Container(503).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(artist.fanart))">$INFO[Container(503).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-        <value condition="True">$VAR[Image_SimpleBackground]</value>
-    </variable>
-    <variable name="Image_Background_Cheater_C513">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$VAR[Image_SimpleBackground]</value>
-        <value condition="!String.IsEmpty(Container(513).ListItem.Art(fanart))">$INFO[Container(513).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(513).ListItem.Art(tvshow.fanart))">$INFO[Container(513).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(513).ListItem.Art(artist.fanart))">$INFO[Container(513).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-        <value condition="True">$VAR[Image_SimpleBackground]</value>
-    </variable>
-    <variable name="Image_Background_Cheater_C523">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$VAR[Image_SimpleBackground]</value>
-        <value condition="!String.IsEmpty(Container(523).ListItem.Art(fanart))">$INFO[Container(523).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(523).ListItem.Art(tvshow.fanart))">$INFO[Container(523).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(523).ListItem.Art(artist.fanart))">$INFO[Container(523).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-        <value condition="True">$VAR[Image_SimpleBackground]</value>
-    </variable>
-    <variable name="Image_Background_Cheater_C553">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$VAR[Image_SimpleBackground]</value>
-        <value condition="!String.IsEmpty(Container(553).ListItem.Art(fanart))">$INFO[Container(553).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(553).ListItem.Art(tvshow.fanart))">$INFO[Container(553).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(553).ListItem.Art(artist.fanart))">$INFO[Container(553).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-        <value condition="True">$VAR[Image_SimpleBackground]</value>
-    </variable>
-    <variable name="Image_Background_Cheater">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">$VAR[Image_SimpleBackground]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-        <value condition="True">$VAR[Image_SimpleBackground]</value>
-    </variable>
-    <variable name="Image_Background_Cheater_Parent">
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301)">$VAR[Image_Background_Cheater_C301]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),503)">$VAR[Image_Background_Cheater_C503]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),513)">$VAR[Image_Background_Cheater_C513]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),523)">$VAR[Image_Background_Cheater_C523]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),553)">$VAR[Image_Background_Cheater_C553]</value>
-        <value condition="True">$VAR[Image_Background_Cheater]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater_C301">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">common/_none.png</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Art(fanart))">$INFO[Container(301).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Art(tvshow.fanart))">$INFO[Container(301).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(301).ListItem.Art(artist.fanart))">$INFO[Container(301).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater_C503">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">common/_none.png</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(fanart))">$INFO[Container(503).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(tvshow.fanart))">$INFO[Container(503).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(503).ListItem.Art(artist.fanart))">$INFO[Container(503).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater_C513">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">common/_none.png</value>
-        <value condition="!String.IsEmpty(Container(513).ListItem.Art(fanart))">$INFO[Container(513).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(513).ListItem.Art(tvshow.fanart))">$INFO[Container(513).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(513).ListItem.Art(artist.fanart))">$INFO[Container(513).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater_C523">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">common/_none.png</value>
-        <value condition="!String.IsEmpty(Container(523).ListItem.Art(fanart))">$INFO[Container(523).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(523).ListItem.Art(tvshow.fanart))">$INFO[Container(523).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(523).ListItem.Art(artist.fanart))">$INFO[Container(523).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater_C553">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">common/_none.png</value>
-        <value condition="!String.IsEmpty(Container(553).ListItem.Art(fanart))">$INFO[Container(553).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(553).ListItem.Art(tvshow.fanart))">$INFO[Container(553).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(553).ListItem.Art(artist.fanart))">$INFO[Container(553).ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater">
-        <value condition="$EXP[Exp_BackgroundArtwork_IsSimple]">common/_none.png</value>
-        <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Property(base_fanart))">$INFO[Container(99950).ListItem.Property(base_fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(fanart))">$INFO[Container(99950).ListItem.Art(fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99950).ListItem.Art(tvshow.fanart))">$INFO[Container(99950).ListItem.Art(tvshow.fanart)]</value>
-        <value condition="!String.IsEmpty(Container(99972).ListItem.PicturePath)">$INFO[Container(99972).ListItem.PicturePath]</value>
-    </variable>
-    <variable name="Image_Foreground_Cheater_Parent">
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),301)">$VAR[Image_Foreground_Cheater_C301]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),503)">$VAR[Image_Foreground_Cheater_C503]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),513)">$VAR[Image_Foreground_Cheater_C513]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),523)">$VAR[Image_Foreground_Cheater_C523]</value>
-        <value condition="Integer.IsEqual(Window.Property(TMDBHelper.WidgetContainer),553)">$VAR[Image_Foreground_Cheater_C553]</value>
-        <value condition="True">$VAR[Image_Foreground_Cheater]</value>
-    </variable>
     <variable name="Image_MediaList_Thumb_C50">
         <value condition="[String.IsEqual(Container(50).ListItem.DBType,episode) | String.IsEqual(Container(50).ListItem.DBType,video) | String.IsEqual(Container(50).ListItem.DBType,musicvideo)] + !String.IsEmpty(Container(50).ListItem.Art(thumb)) + !String.IsEqual(Container(50).ListItem.Icon,Container(50).ListItem.Art(fanart)) + !String.IsEqual(Container(50).ListItem.Icon,OverlaySpoiler.png) + !String.IsEqual(Container(50).ListItem.Art(thumb),Container(50).ListItem.Art(poster)) + !String.IsEqual(Container(50).ListItem.Art(thumb),Container(50).ListItem.Art(tvshow.poster))">$INFO[Container(50).ListItem.Art(thumb)]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.EPGEventIcon)">$INFO[Container(50).ListItem.EPGEventIcon]</value>
@@ -281,6 +139,12 @@
         <value condition="!String.IsEmpty(Container(52).ListItem.Art(tvshow.poster))">$INFO[Container(52).ListItem.Art(tvshow.poster)]</value>
         <value condition="!String.IsEmpty(Container(52).ListItem.Icon)">$INFO[Container(52).ListItem.Icon]</value>
     </variable>
+    <variable name="Image_Poster_C450">
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(poster))">$INFO[Container(450).ListItem.Art(poster)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(season.poster))">$INFO[Container(450).ListItem.Art(season.poster)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(tvshow.poster))">$INFO[Container(450).ListItem.Art(tvshow.poster)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
+    </variable>
     <variable name="Image_Poster">
         <value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
         <value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
@@ -297,6 +161,11 @@
         <value condition="!String.IsEmpty(Container(50).ListItem.Art(clearlogo))">$INFO[Container(50).ListItem.Art(clearlogo)]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.Art(tvshow.clearlogo))">$INFO[Container(50).ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="!String.IsEmpty(Container(50).ListItem.Art(artist.clearlogo))">$INFO[Container(50).ListItem.Art(artist.clearlogo)]</value>
+    </variable>
+    <variable name="Image_Clearlogo_C450">
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(clearlogo))">$INFO[Container(450).ListItem.Art(clearlogo)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(tvshow.clearlogo))">$INFO[Container(450).ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(artist.clearlogo))">$INFO[Container(450).ListItem.Art(artist.clearlogo)]</value>
     </variable>
     <variable name="Image_Clearlogo">
         <value condition="!String.IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
@@ -345,6 +214,18 @@
         <value condition="!String.IsEmpty(Container(513).ListItem.EPGEventIcon)">$INFO[Container(513).ListItem.EPGEventIcon]</value>
         <value condition="!String.IsEmpty(Container(513).ListItem.Art(thumb))">$INFO[Container(513).ListItem.Art(thumb)]</value>
         <value condition="!String.IsEmpty(Container(513).ListItem.Icon)">$INFO[Container(513).ListItem.Icon]</value>
+    </variable>
+    <variable name="Image_Landscape_C450">
+        <value condition="[String.IsEqual(Container(450).ListItem.DBType,episode) | String.IsEqual(Container(450).ListItem.DBType,video) | String.IsEqual(Container(450).ListItem.DBType,musicvideo)] + !String.IsEmpty(Container(450).ListItem.Art(thumb)) + !String.IsEqual(Container(450).ListItem.Icon,Container(450).ListItem.Art(fanart)) + !String.IsEqual(Container(450).ListItem.Icon,OverlaySpoiler.png) + !String.IsEqual(Container(450).ListItem.Art(thumb),Container(450).ListItem.Art(poster)) + !String.IsEqual(Container(450).ListItem.Art(thumb),Container(450).ListItem.Art(tvshow.poster))">$INFO[Container(450).ListItem.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(landscape)) + !Skin.HasSetting(DisableLandscapeArt)">$INFO[Container(450).ListItem.Art(landscape)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(season.landscape)) + !Skin.HasSetting(DisableLandscapeArt)">$INFO[Container(450).ListItem.Art(season.landscape)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(tvshow.landscape)) + !Skin.HasSetting(DisableLandscapeArt)">$INFO[Container(450).ListItem.Art(tvshow.landscape)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(fanart))">$INFO[Container(450).ListItem.Art(fanart)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(tvshow.fanart))">$INFO[Container(450).ListItem.Art(tvshow.fanart)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Property(fanart))">$INFO[Container(450).ListItem.Property(fanart)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.EPGEventIcon)">$INFO[Container(450).ListItem.EPGEventIcon]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Art(thumb))">$INFO[Container(450).ListItem.Art(thumb)]</value>
+        <value condition="!String.IsEmpty(Container(450).ListItem.Icon)">$INFO[Container(450).ListItem.Icon]</value>
     </variable>
     <variable name="Image_Landscape">
         <value condition="[String.IsEqual(ListItem.DBType,episode) | String.IsEqual(ListItem.DBType,video) | String.IsEqual(ListItem.DBType,musicvideo)] + !String.IsEmpty(ListItem.Art(thumb)) + !String.IsEqual(ListItem.Icon,ListItem.Art(fanart)) + !String.IsEqual(ListItem.Icon,OverlaySpoiler.png) + !String.IsEqual(ListItem.Art(thumb),ListItem.Art(poster)) + !String.IsEqual(ListItem.Art(thumb),ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(thumb)]</value>

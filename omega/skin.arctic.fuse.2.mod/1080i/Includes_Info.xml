@@ -5,22 +5,38 @@
         <param name="label">$VAR[Label_Title_Container]</param>
         <param name="wrapmultiline">false</param>
         <param name="visible">true</param>
-        <param name="width">info_plot_w</param>
-        <param name="height">162</param>
+        <param name="width">info_title_w</param>
+        <param name="autoheight">false</param>
         <definition>
             <control type="textbox">
                 <top>-20</top>
                 <label>$PARAM[label]</label>
                 <textcolor>$PARAM[colordiffuse]_100</textcolor>
                 <font>font_title_main</font>
-                <aligny>center</aligny>
-                <height max="162">$PARAM[height]</height>
+                <aligny>top</aligny>
+                <height max="160">auto</height>
                 <visible>$PARAM[visible]</visible>
                 <width>$PARAM[width]</width>
+                <autoscroll>false</autoscroll>
+                <visible>$PARAM[autoheight]</visible>
+            </control>
+            <control type="label">
+                <top>-20</top>
+                <label>$PARAM[label]</label>
+                <wrapmultiline>true</wrapmultiline>
+                <textcolor>$PARAM[colordiffuse]_100</textcolor>
+                <font>font_title_main</font>
+                <aligny>center</aligny>
+                <height>160</height>
+                <visible>$PARAM[visible]</visible>
+                <width>$PARAM[width]</width>
+                <autoscroll>false</autoscroll>
+                <scroll>false</scroll>
+                <visible>![$PARAM[autoheight]]</visible>
             </control>
             <control type="group">
                 <top>info_title_text_buffer_h</top>
-                <height>3</height>
+                <height>5</height>
                 <visible>$PARAM[visible]</visible>
             </control>
         </definition>
@@ -33,6 +49,7 @@
                 <param name="label">$PARAM[label]</param>
                 <param name="colordiffuse">$PARAM[colordiffuse]</param>
                 <param name="visible">![$PARAM[mainlogo_visible]]</param>
+                <param name="width">$PARAM[width]</param>
             </include>
 
             <control type="group">
@@ -52,7 +69,7 @@
     <include name="Info_Title">
         <param name="colordiffuse">main_fg</param>
         <param name="container" />
-        <param name="width">info_plot_w</param>
+        <param name="width">info_title_w</param>
         <!-- <param name="mainlogo_visible">[!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.CropImage))]</param> -->
         <param name="mainlogo_visible">[!String.IsEmpty(Window(Home).Property(TMDBHelper.ListItem.CropImage)) | !String.IsEmpty(ListItem.Art(clearlogo)) | !String.IsEmpty(ListItem.Art(tvshow.clearlogo)) | !String.IsEmpty(ListItem.Art(artist.clearlogo))]</param>
         <param name="mainlogo_texture">$VAR[Image_CropLogo]</param>
@@ -63,7 +80,7 @@
                 <param name="colordiffuse">$PARAM[colordiffuse]</param>
                 <param name="visible">True</param>
                 <param name="width">$PARAM[width]</param>
-                <param name="height">auto</param>
+                <param name="autoheight">true</param>
             </include>
             <!-- Other -->
             <include content="Info_Title_Logo" condition="Skin.HasSetting(TMDbHelper.EnableCrop)">
@@ -72,7 +89,6 @@
                 <param name="mainlogo_visible">$PARAM[mainlogo_visible]</param>
                 <param name="mainlogo_texture">$PARAM[mainlogo_texture]</param>
                 <param name="width">$PARAM[width]</param>
-                <param name="height">$PARAM[height]</param>
             </include>
         </definition>
     </include>
@@ -951,7 +967,7 @@
         <textcolor>main_fg_90</textcolor>
         <font>font_main_bold</font>
         <width>auto</width>
-        <top>-3</top>
+        <top>view_line_top</top>
         <height>80</height>
     </include>
 
@@ -1654,8 +1670,8 @@
     <include name="Info_Panel_Dimensions">
         <width>info_panel_w</width>
         <left>view_pad</left>
-        <include condition="Skin.HasSetting(View.EnableFullSizeInfo)">Info_Panel_Dimensions_FullSize</include>
-        <include condition="!Skin.HasSetting(View.EnableFullSizeInfo)">Info_Panel_Dimensions_MainSize</include>
+        <include condition="!Skin.HasSetting(View.DisableFullSizeInfo)">Info_Panel_Dimensions_FullSize</include>
+        <include condition="Skin.HasSetting(View.DisableFullSizeInfo)">Info_Panel_Dimensions_MainSize</include>
     </include>
 
     <include name="Info_Panel">
@@ -1667,6 +1683,7 @@
         <param name="ratings">true</param>
         <param name="details">true</param>
         <param name="title">true</param>
+        <param name="titlewidth">info_title_w</param>
         <param name="titlelabel">$VAR[Label_Title]</param>
         <param name="plotlabel">$VAR[Label_Plot]</param>
         <param name="details_include">Items_Null</param>
@@ -1695,7 +1712,7 @@
                     <include content="Info_Title" condition="$PARAM[title]">
                         <param name="label">$PARAM[titlelabel]</param>
                         <param name="colordiffuse">$PARAM[colordiffuse]</param>
-                        <param name="width">$PARAM[plotwidth]</param>
+                        <param name="width">$PARAM[titlewidth]</param>
                         <param name="mainlogo_visible">$PARAM[mainlogo_visible]</param>
                         <param name="mainlogo_texture">$PARAM[mainlogo_texture]</param>
                     </include>
@@ -1716,7 +1733,7 @@
                     </control>
 
                     <!-- Textbox -->
-                    <include content="Info_Panel_Textbox" condition="!Skin.HasSetting(View.EnableFullSizeInfo)">
+                    <include content="Info_Panel_Textbox" condition="Skin.HasSetting(View.DisableFullSizeInfo)">
                         <param name="plotlabel">$PARAM[plotlabel]</param>
                         <param name="plotwidth">$PARAM[plotwidth]</param>
                         <param name="plotheight">$PARAM[plotheight]</param>
@@ -1724,7 +1741,7 @@
                         <param name="details_include">$PARAM[details_include]</param>
                         <param name="container">$PARAM[container]</param>
                     </include>
-                    <include content="Info_Panel_Textbox" condition="Skin.HasSetting(View.EnableFullSizeInfo)">
+                    <include content="Info_Panel_Textbox" condition="!Skin.HasSetting(View.DisableFullSizeInfo)">
                         <param name="plotlabel">$PARAM[plotlabel]</param>
                         <param name="plotwidth">$PARAM[plotwidth]</param>
                         <param name="plotheight">$PARAM[plotheight_full]</param>
