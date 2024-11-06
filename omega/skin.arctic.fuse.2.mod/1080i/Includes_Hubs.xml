@@ -88,7 +88,7 @@
             <ondown>330</ondown>
             <itemgap>-800</itemgap>
             <include content="Hub_Slide_Spotlight_OnWidgets">
-                <param name="condition">[[String.IsEmpty(Window.Property(Slide.WidgetContainer)) | [Integer.IsEqual(Window.Property(Slide.WidgetContainer),300) | Control.HasFocus(300)]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]</param>
+                <param name="condition">[[String.IsEmpty(Window.Property(Slide.WidgetContainer)) | [Integer.IsEqual(Window.Property(Slide.WidgetContainer),300) | $EXP[Exp_HomeMenu_HasFocus]]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]</param>
             </include>
             <nested />
         </control>
@@ -104,7 +104,7 @@
                 </include>
                 <include content="Hub_Slide_Group_OnWidgets" condition="![$PARAM[widgets_only]]">
                     <param name="posy">hub_group_widgetup_s</param>
-                    <param name="condition">[[String.IsEmpty(Window.Property(Slide.WidgetContainer)) | [Integer.IsEqual(Window.Property(Slide.WidgetContainer),300) | Control.HasFocus(300)]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]</param>
+                    <param name="condition">[[String.IsEmpty(Window.Property(Slide.WidgetContainer)) | [Integer.IsEqual(Window.Property(Slide.WidgetContainer),300) | $EXP[Exp_HomeMenu_HasFocus]]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]</param>
                 </include>
 
                 <nested />
@@ -257,6 +257,40 @@
         </control>
     </include>
 
+    <include name="Hub_Left_Bezier_Object">
+        <param name="left">-960</param>
+        <param name="width">1680</param>
+        <param name="visible">[$EXP[Exp_HomeMenu_HasFocus] | Window.IsActive(1163)]</param>
+        <definition>
+            <control type="image">
+                <left>$PARAM[left]</left>
+                <width>$PARAM[width]</width>
+                <height>1080</height>
+                <visible>$PARAM[visible]</visible>
+                <texture colordiffuse="$VAR[ColorBackground]" border="0,0,1079,0">background/combined_sidemenu.png</texture>
+                <include content="Animation_Fade_In">
+                    <param name="type">Visible</param>
+                    <param name="time">200</param>
+                </include>
+                <include content="Animation_Fade_Out">
+                    <param name="type">Hidden</param>
+                    <param name="time">600</param>
+                </include>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Hub_Left_Bezier">
+        <include content="Hub_Left_Bezier_Object" condition="!$EXP[Exp_HomeMenu_IsExpanded] + $PARAM[is_homemenu]">
+            <param name="left">-640</param>
+            <param name="width">1360</param>
+        </include>
+        <include condition="$EXP[Exp_HomeMenu_IsExpanded] + $PARAM[is_homemenu]">Hub_Left_Bezier_Object</include>
+        <include content="Hub_Left_Bezier_Object" condition="![$PARAM[is_homemenu]]">
+            <param name="visible">[Window.IsActive(1163)]</param>
+        </include>
+    </include>
+
     <include name="Hub_Controls">
         <param name="fullscreen_content">$VAR[Path_Spotlight_Fallback_Content]</param>
         <param name="fullscreen_target">$VAR[Path_Spotlight_Fallback_Target]</param>
@@ -272,6 +306,14 @@
             </control>
 
             <include content="Object_Hidden_Button">
+                <param name="id">306</param>
+                <onfocus condition="Integer.IsEqual(Window.Property(Focus.ControlID),300) + Control.IsVisible(311)">SetFocus(311)</onfocus>
+                <onfocus condition="Integer.IsEqual(Window.Property(Focus.ControlID),300) + !Control.IsVisible(311)">SetFocus(400)</onfocus>
+                <onfocus condition="String.IsEmpty(Window.Property(SideMenu.CurrentItem)) + !Integer.IsEqual(Window.Property(Focus.ControlID),300)">SetFocus(300)</onfocus>
+                <onfocus condition="!String.IsEmpty(Window.Property(SideMenu.CurrentItem)) + !Integer.IsEqual(Window.Property(Focus.ControlID),300)">SetFocus(300,$INFO[Window.Property(SideMenu.CurrentItem)],absolute)</onfocus>
+            </include>
+
+            <include content="Object_Hidden_Button">
                 <param name="id">307</param>
                 <onfocus>SetFocus($INFO[Window.Property(307Refocus)])</onfocus>
                 <onfocus>ActivateWindow(1170)</onfocus>
@@ -285,13 +327,18 @@
                 <param name="include_layer">Hub_SpotlightFanart</param>
             </include>
             <include condition="![![$PARAM[widgets_only]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]">Background_Main</include>
+
+
+
             <include>Background_Transition</include>
             <include condition="![$PARAM[widgets_only]]">Hub_Top_Bezier</include>
 
             <control type="group">
+                <include content="Hub_Left_Bezier">
+                    <param name="is_homemenu">$PARAM[is_homemenu]</param>
+                </include>
                 <include condition="$PARAM[is_homemenu]">Hub_Menu_Slide</include>
                 <include>Hub_Menu_Dialog_Slide</include>
-
                 <control type="group">
                     <include>Animation_Group_Bumper</include>
                     <include>Animation_View_WindowChange</include>
@@ -468,6 +515,7 @@
 
         <onfocus>ClearProperty(Background.ShowOverlay,Home)</onfocus>
         <onfocus>ClearProperty(Background.HideArtwork)</onfocus>
+        <onfocus>SetProperty(Focus.ControlID,$NUMBER[300],$PARAM[property_window_id])</onfocus>
     </include>
 
     <variable name="Hub_Categories_Color_FO">
@@ -778,7 +826,7 @@
         <onup condition="Control.IsVisible(311)">311</onup>
         <onup condition="!Control.IsVisible(311) + Control.IsVisible(300)">300</onup>
         <include content="Hub_Slide_Spotlight_OnWidgets">
-            <param name="condition">[[String.IsEmpty(Window.Property(Slide.WidgetContainer)) | [Integer.IsEqual(Window.Property(Slide.WidgetContainer),300) | Control.HasFocus(300)]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]</param>
+            <param name="condition">[[String.IsEmpty(Window.Property(Slide.WidgetContainer)) | [Integer.IsEqual(Window.Property(Slide.WidgetContainer),300) | $EXP[Exp_HomeMenu_HasFocus]]] + !Skin.HasSetting(Hub.$PARAM[window_id].DisableSpotlight)]</param>
         </include>
     </include>
 
