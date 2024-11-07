@@ -1,5 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<addons><addon id="skin.arctic.fuse.2.mod" name="Arctic Fuse 2 Mod" provider-name="jurialmunkey" version="2.3.1">
+<addons><addon id="script.module.jurialmunkey" name="jurialmunkey common" provider-name="jurialmunkey" version="0.1.19">
+  <requires>
+    <import addon="xbmc.python" version="3.0.1" />
+    <import addon="script.module.requests" version="2.9.1" />
+  </requires>
+  <extension point="xbmc.python.module" library="resources/modules" />
+  <extension point="xbmc.addon.metadata">
+    <description lang="en_GB">Common code required by TMDbHelper and other related jurialmunkey add-ons</description>
+    <license>GPL-3.0-or-later</license>
+    <website>https://github.com/jurialmunkey/script.module.jurialmunkey</website>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon><addon id="skin.arctic.fuse.2.mod" name="Arctic Fuse 2 Mod" provider-name="jurialmunkey" version="2.3.1">
     <requires>
         <import addon="xbmc.gui" version="5.17.0" />
         <import addon="script.skinvariables" version="2.1.14" />
