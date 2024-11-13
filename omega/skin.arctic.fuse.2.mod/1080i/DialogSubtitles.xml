@@ -26,10 +26,7 @@
                             <param name="label">$LOCALIZE[413]</param>
                             <param name="icon">special://skin/extras/icons/circle-plus.png</param>
                             <param name="textcolor">dialog_fg</param>
-                            <include content="DialogInfo_Button_HintLabel">
-                                <param name="textcolor">dialog_fg</param>
-                                <param name="label">$LOCALIZE[413]</param>
-                            </include>
+                            <param name="include_hintlabel">true</param>
                         </include>
                     </control>
                 </control>
@@ -85,13 +82,13 @@
                                 <control type="image">
                                     <top>0</top>
                                     <height>1</height>
-                                    <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                                    <texture colordiffuse="$VAR[Color_DialogBorder]">common/white.png</texture>
                                     <right>$PARAM[lines_right]</right>
                                 </control>
                                 <control type="image">
                                     <bottom>0</bottom>
                                     <height>1</height>
-                                    <texture colordiffuse="dialog_fg_12">common/white.png</texture>
+                                    <texture colordiffuse="$VAR[Color_DialogBorder]">common/white.png</texture>
                                     <right>$PARAM[lines_right]</right>
                                 </control>
                             </control>

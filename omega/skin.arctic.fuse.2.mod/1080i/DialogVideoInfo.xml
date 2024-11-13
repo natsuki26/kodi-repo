@@ -9,6 +9,8 @@
 
     <include>DialogInfo_Onload</include>
 
+    <onload>SetProperty(TMDbHelper.EnableExtendedProperties,True)</onload>
+
     <onload condition="Skin.HasSetting(Trailers.EnableAutoPlayback.Info) + !String.IsEmpty(ListItem.Trailer) + !Player.HasMedia">SetProperty(PlayTrailer,$ESCINFO[ListItem.Trailer],Home)</onload>
     <onload condition="Skin.HasSetting(Trailers.EnableAutoPlayback.Info) + !String.IsEmpty(ListItem.Trailer) + !Player.HasMedia">ActivateWindow(1123)</onload>
 
@@ -38,7 +40,7 @@
             <onclick condition="!ListItem.HasVideoVersions">SendClick(8)</onclick>
         </control>
 
-        <include>Defs_TMDbHelper_Loader</include>
+        <include>Defs_Background_Loader</include>
 
         <include condition="Window.IsVisible(fullscreenvideo)">OSD_VideoBackground_Dialog</include>
 
@@ -100,9 +102,9 @@
                             <visible>!String.IsEmpty(ListItem.Art(fanart))</visible>
                         </item>
                         <item>
-                            <icon>$INFO[Container(99950).ListItem.Art(fanart)]</icon>
-                            <visible>!String.IsEmpty(Container(99950).ListItem.Art(fanart))</visible>
-                            <visible>!String.IsEqual(Container(99950).ListItem.Art(fanart),ListItem.Art(fanart))</visible>
+                            <icon>$INFO[Window(Home).Property(TMDbHelper.ListItem.Fanart)]</icon>
+                            <visible>!String.IsEmpty(Window(Home).Property(TMDbHelper.ListItem.Fanart))</visible>
+                            <visible>!String.IsEqual(Window(Home).Property(TMDbHelper.ListItem.Fanart),ListItem.Art(fanart))</visible>
                         </item>
                         <item>
                             <icon>$INFO[ListItem.Art(fanart1)]</icon>
