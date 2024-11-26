@@ -249,6 +249,13 @@
         </control>
     </include>
 
+    <include name="OSD_Dialog_Background_Blur">
+        <include content="Dialog_Background_Blur">
+            <param name="diffuse">$PARAM[diffuse]</param>
+            <param name="transparency">true</param>
+        </include>
+    </include>
+
     <include name="OSD_Stream_Selector_Divider">
         <control type="image">
             <texture border="20" colordiffuse="dialog_fg_12">common/dialog.png</texture>
@@ -264,49 +271,56 @@
 
     <include name="OSD_Stream_Selector_BackgroundResizer">
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h760.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>760</height>
             <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,6)</visible>
         </control>
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h680.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>680</height>
             <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,6)</visible>
         </control>
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h600.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>600</height>
             <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,5)</visible>
         </control>
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h520.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>520</height>
             <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,4)</visible>
         </control>
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h440.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>440</height>
             <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,3)</visible>
         </control>
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h360.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>360</height>
             <visible>Integer.IsEqual(Container($PARAM[id]).NumItems,2)</visible>
         </control>
         <control type="group">
-            <include content="Dialog_Background_Blur">
+            <include content="OSD_Dialog_Background_Blur">
+                <param name="diffuse">diffuse/dialog_w640_h280.png</param>
             </include>
             <include>OSD_Stream_Selector_Divider</include>
             <height>280</height>
@@ -545,7 +559,7 @@
                         <include>Object_ItemBack</include>
                         <visible>$PARAM[extended]</visible>
                         <control type="image">
-                            <texture background="true" diffuse="diffuse/landscape_w380_h214.png">$VAR[Image_OSD_Landscape]</texture>
+                            <texture background="true" diffuse="diffuse/landscape_w410_h231.png">$VAR[Image_OSD_Landscape]</texture>
                             <aspectratio scalediffuse="false">keep</aspectratio>
                         </control>
                         <control type="group">
